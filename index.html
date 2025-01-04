@@ -13,7 +13,7 @@
         #ts3viewer_1043405 {
             width: 100%;
             height: 100%;
-            overflow-y: scroll; /* Scrollen innerhalb des Divs aktivieren */
+            overflow-y: hidden; /* Deaktiviert das vertikale Scrollen */
             -webkit-overflow-scrolling: touch; /* Smooth Scrolling für WebKit-Browser */
         }
 
@@ -21,17 +21,11 @@
         #ts3viewer_1043405::-webkit-scrollbar {
             display: none; /* Entfernt die sichtbaren Scrollbalken */
         }
-
-        /* Das Element innerhalb des iframes - falls nötig, um Scrollbalken auch dort zu entfernen */
-        #ts3viewer_1043405 iframe {
-            border: none; /* Entfernt die Grenze des eingebetteten iframes */
-        }
     </style>
 </head>
-
 <body>
 
-<div id="ts3viewer_1043405"> </div>
+<div id="ts3viewer_1043405"></div>
 
 <script src="https://static.tsviewer.com/short_expire/js/ts3viewer_loader.js"></script>
 <script>
