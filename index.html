@@ -1,42 +1,43 @@
 <html>
-
 <head>
     <style type="text/css">
+        /* Der Body-Bereich für die gesamte Seite */
         body {
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Verhindert Scrollen auf der äußeren Seite */
+            overflow: hidden; /* Verhindert, dass der Body selbst scrollt */
+            height: 100vh; /* Maximale Höhe für den Body */
         }
 
+        /* Das Container-Div für den Teamspeak-Viewer */
         #ts3viewer_1043405 {
             width: 100%;
             height: 100%;
-            overflow: auto; /* Ermöglicht das Scrollen innerhalb des div */
+            overflow-y: scroll; /* Scrollen innerhalb des Divs aktivieren */
+            -webkit-overflow-scrolling: touch; /* Smooth Scrolling für WebKit-Browser */
         }
 
-        /* Unsichtbare Scrollbalken für WebKit-Browser */
+        /* Unsichtbare Scrollbalken für WebKit-basierte Browser (Chrome, Safari) */
         #ts3viewer_1043405::-webkit-scrollbar {
-            display: none;
+            display: none; /* Entfernt die sichtbaren Scrollbalken */
         }
 
-        /* Für alle anderen Browser (falls benötigt) */
-        #ts3viewer_1043405 {
-            -ms-overflow-style: none;  /* Für Internet Explorer */
-            scrollbar-width: none;  /* Für Firefox */
+        /* Das Element innerhalb des iframes - falls nötig, um Scrollbalken auch dort zu entfernen */
+        #ts3viewer_1043405 iframe {
+            border: none; /* Entfernt die Grenze des eingebetteten iframes */
         }
     </style>
 </head>
 
 <body>
 
-    <div id="ts3viewer_1043405"> </div>
+<div id="ts3viewer_1043405"> </div>
 
-    <script src="https://static.tsviewer.com/short_expire/js/ts3viewer_loader.js"></script>
-    <script>
-        var ts3v_url_1 = "https://www.tsviewer.com/ts3viewer.php?ID=1043405&text=757575&text_size=12&text_family=1&text_s_color=000000&text_s_weight=normal&text_s_style=normal&text_s_variant=normal&text_s_decoration=none&text_i_color=&text_i_weight=normal&text_i_style=normal&text_i_variant=normal&text_i_decoration=none&text_c_color=&text_c_weight=normal&text_c_style=normal&text_c_variant=normal&text_c_decoration=none&text_u_color=000000&text_u_weight=normal&text_u_style=normal&text_u_variant=normal&text_u_decoration=none&text_s_color_h=&text_s_weight_h=bold&text_s_style_h=normal&text_s_variant_h=normal&text_s_decoration_h=none&text_i_color_h=000000&text_i_weight_h=bold&text_i_style_h=normal&text_i_variant_h=normal&text_i_decoration_h=none&text_c_color_h=&text_c_weight_h=normal&text_c_style_h=normal&text_c_variant_h=normal&text_c_decoration_h=none&text_u_color_h=&text_u_weight_h=bold&text_u_style_h=normal&text_u_variant_h=normal&text_u_decoration_h=none&iconset=default";
-        ts3v_display.init(ts3v_url_1, 1043405, 100);
-    </script>
+<script src="https://static.tsviewer.com/short_expire/js/ts3viewer_loader.js"></script>
+<script>
+    var ts3v_url_1 = "https://www.tsviewer.com/ts3viewer.php?ID=1043405&text=757575&text_size=12&text_family=1&text_s_color=000000&text_s_weight=normal&text_s_style=normal&text_s_variant=normal&text_s_decoration=none&text_i_color=&text_i_weight=normal&text_i_style=normal&text_i_variant=normal&text_i_decoration=none&text_c_color=&text_c_weight=normal&text_c_style=normal&text_c_variant=normal&text_c_decoration=none&text_u_color=000000&text_u_weight=normal&text_u_style=normal&text_u_variant=normal&text_u_decoration=none&text_s_color_h=&text_s_weight_h=bold&text_s_style_h=normal&text_s_variant_h=normal&text_s_decoration_h=none&text_i_color_h=000000&text_i_weight_h=bold&text_i_style_h=normal&text_i_variant_h=normal&text_i_decoration_h=none&text_c_color_h=&text_c_weight_h=normal&text_c_style_h=normal&text_c_variant_h=normal&text_c_decoration_h=none&text_u_color_h=&text_u_weight_h=bold&text_u_style_h=normal&text_u_variant_h=normal&text_u_decoration_h=none&iconset=default";
+    ts3v_display.init(ts3v_url_1, 1043405, 100);
+</script>
 
 </body>
-
 </html>
